@@ -1,0 +1,210 @@
+/* Mobile Responsive Improvements for Arabic App */
+
+/* Ensure RTL is properly handled */
+body {
+  direction: rtl;
+}
+
+/* Mobile first responsive text sizes */
+@media (max-width: 640px) {
+  /* Card content padding adjustments */
+  .card-content-mobile {
+    @apply p-3;
+  }
+
+  /* Button text adjustments */
+  .btn-text-mobile {
+    font-size: 0.875rem;
+  }
+
+  /* Responsive grid adjustments */
+  .mobile-grid {
+    @apply grid grid-cols-1 gap-3;
+  }
+
+  /* Customer card improvements */
+  .customer-card-mobile {
+    @apply p-4 space-y-3;
+  }
+
+  /* Navigation adjustments */
+  .nav-mobile {
+    @apply px-2 py-3;
+  }
+
+  /* Header title adjustments */
+  .header-title-mobile {
+    @apply text-lg;
+  }
+
+  /* Statistics cards mobile */
+  .stats-card-mobile {
+    @apply p-4;
+  }
+
+  .stats-card-mobile .stats-value {
+    @apply text-xl;
+  }
+
+  .stats-card-mobile .stats-label {
+    @apply text-xs;
+  }
+
+  /* Action buttons container */
+  .actions-mobile {
+    @apply flex flex-wrap gap-2 justify-start;
+  }
+
+  .actions-mobile .btn {
+    @apply text-xs px-2 py-1;
+  }
+
+  /* Search and filter mobile */
+  .search-mobile {
+    @apply w-full mb-4;
+  }
+
+  /* Customer info grid mobile */
+  .customer-info-mobile {
+    @apply space-y-2;
+  }
+
+  .customer-info-mobile .info-item {
+    @apply flex items-center gap-2 text-sm;
+  }
+
+  /* Table responsive */
+  .table-mobile {
+    @apply overflow-x-auto;
+  }
+
+  .table-mobile table {
+    @apply min-w-full;
+  }
+
+  .table-mobile th,
+  .table-mobile td {
+    @apply px-2 py-1 text-sm;
+  }
+
+  /* Dialog mobile adjustments */
+  .dialog-mobile {
+    @apply mx-4;
+  }
+
+  .dialog-mobile .dialog-content {
+    @apply max-w-sm;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-grid {
+    @apply grid-cols-2;
+  }
+
+  .tablet-gap {
+    @apply gap-4;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1025px) {
+  .desktop-grid {
+    @apply grid-cols-4;
+  }
+
+  .desktop-gap {
+    @apply gap-6;
+  }
+}
+
+/* Touch-friendly button sizing */
+.touch-friendly {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Arabic font optimization for mobile */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Ensure Arabic text is readable on small screens */
+  .arabic-text {
+    font-family: "Cairo", "Tajawal", "Amiri", system-ui, sans-serif;
+    font-weight: 500;
+  }
+}
+
+/* Responsive spacing */
+.responsive-spacing {
+  @apply space-y-4 sm:space-y-6;
+}
+
+.responsive-padding {
+  @apply p-4 sm:p-6;
+}
+
+.responsive-margin {
+  @apply m-4 sm:m-6;
+}
+
+/* Mobile navigation improvements */
+.mobile-nav-item {
+  @apply flex items-center gap-3 p-4 rounded-lg transition-colors;
+}
+
+.mobile-nav-item:hover {
+  @apply bg-blue-50;
+}
+
+.mobile-nav-item.active {
+  @apply bg-blue-100 text-blue-600;
+}
+
+/* Responsive card layouts */
+.responsive-card {
+  @apply w-full;
+}
+
+@media (min-width: 640px) {
+  .responsive-card {
+    @apply max-w-none;
+  }
+}
+
+/* Mobile-friendly form inputs */
+.mobile-input {
+  @apply text-base; /* Prevents zoom on iOS */
+}
+
+/* Responsive flex containers */
+.responsive-flex {
+  @apply flex flex-col sm:flex-row gap-2 sm:gap-4;
+}
+
+/* Mobile-optimized scrolling */
+.mobile-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure proper viewport sizing */
+.mobile-viewport {
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+}
