@@ -27,8 +27,7 @@ import { offlineDataManager } from "./lib/offlineDataManager";
 import { MemoryCleanup } from "./lib/memoryCleanup";
 import { RealDataLoader } from "./lib/realDataLoader";
 import { CleanupFakeData } from "./lib/cleanupFakeData";
-import "./lib/executeCleaning"; // تنفيذ فوري وشامل لحذف البيانات الوهمية
-import "./lib/syncQueueCleaner"; // تنظيف طابور المزامنة من العمليات الفاسدة
+// استيرادات التنظيف التلقائي تم إزالتها لحل مشكلة الـ refresh المستمر
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -117,10 +116,8 @@ const AppInitializer: FC<{ children: ReactNode }> = ({ children }) => {
 
         if (!isMounted) return;
 
-        // Auto cleanup fake data and load real data - but don't wait for it
-        CleanupFakeData.autoCleanupOnStart().catch((error) => {
-          console.warn("تحذير: مشكلة في تنظيف البيانات:", error);
-        });
+        // تم إزالة التنظيف التلقائي لحل مشكلة الـ refresh المستمر
+        // يمكن للمستخدم استخدام التنظيف اليدوي من الإعدادات عند الحاجة
 
         console.log("✅ App ready with real data loading");
         setIsReady(true);
